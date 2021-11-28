@@ -1,0 +1,36 @@
+Started GET "/" for 127.0.0.1 at 2021-11-28 13:48:58 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 522)
+Completed 200 OK in 21ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4558)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-28 13:52:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 226)
+Completed 200 OK in 10ms (Views: 5.6ms | Allocations: 894)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-28 13:52:52 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 3ms (Views: 2.2ms | Allocations: 375)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-28 13:52:57 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 48)
+Completed 200 OK in 2ms (Views: 0.9ms | Allocations: 370)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-28 13:54:19 -0500
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 28)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 677)
+
+
