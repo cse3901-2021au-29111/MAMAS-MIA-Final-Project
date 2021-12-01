@@ -8,3 +8,21 @@ html{
 body{
   padding-top: 50px;
 }
+
+.center{
+  text-align: center;
+}
+
+#title_button{
+  font-size: 2em;
+  float: left;
+  color: ghostwhite;
+  padding-top: 7px;
+  font-weight: bold;
+}
+
+.btn-primary{
+  background-color: hotpink !important;
+  border-color: hotpink !important;
+  color: black !important;
+}
