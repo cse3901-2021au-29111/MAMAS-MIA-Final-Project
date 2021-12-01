@@ -26,3 +26,22 @@ body{
   border-color: hotpink !important;
   color: black !important;
 }
+
+input, textarea, select{
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input {
+  height: auto !important;
+}
+
+#signup_message{
+  text-align: center;
+  h1 {
+    font-size: 3em;
+    padding: 20px;
+    font-weight: bold;
+  }
+}
