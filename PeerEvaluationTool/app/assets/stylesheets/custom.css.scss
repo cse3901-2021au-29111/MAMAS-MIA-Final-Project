@@ -50,8 +50,17 @@ input {
   text-align: center;
 }
 
-#about{
+#about_page{
   text-align: center;
   font-size: 2em;
+}
+
+#help_page{
+  text-align: center;
+  h2 {
+    font-size: 1.5em !important;
+    text-align: left !important;
+    line-height: 2;
+  }
 
 }
