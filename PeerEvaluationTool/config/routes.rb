@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
 
   # Delete later
-  root 'application#hello'
+  root 'static_pages#home'
 end
