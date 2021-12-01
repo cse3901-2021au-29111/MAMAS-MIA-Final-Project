@@ -1,1 +1,4 @@
 <h1> Welcome <%= @user.first_name %> <%= @user.last_name %> !</h1>
+<% if(@user.instructor) %>
+    <h2>We see you are an instructor!</h2>
+<%end %>
