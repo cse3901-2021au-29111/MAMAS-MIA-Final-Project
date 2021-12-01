@@ -5,11 +5,11 @@ one:
   first_name: MyString
   last_name: MyString
   instructor: false
-  password_hash: MyString
+  password: MyString
 
 two:
   email: MyString
   first_name: MyString
   last_name: MyString
   instructor: false
-  password_hash: MyString
+  password: MyString
