@@ -4,6 +4,7 @@
 
 Creators of the project:\
 -Max Starvaggi
+-Srujan Kalva
 
 Make sure to run ```bundle install``` from within the /PeerEvaluationTool/ directory
 
