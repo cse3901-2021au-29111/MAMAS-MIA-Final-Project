@@ -13,19 +13,27 @@
   <body>
   <header class = "navbar navbar-fixed-top navbar-inverse">
     <div class="container">
+      <% if logged_in?%>
+        <%=link_to("DOGME Peer Evaluation Tool", @current_user, id: "title_button") %>
+        <nav>
+          <ul class = "nav navbar-nav navbar-right">
+            <li><%=link_to "Profile", @current_user %></li>
+            <li><%=link_to "About", about_path %></li>
+            <li><%=link_to "Help", help_path %></li>
+            <li><%=link_to "Logout", logout_path, method: "delete" %></li>
+          </ul>
+        </nav>
+      <% else %>
       <%=link_to("DOGME Peer Evaluation Tool", root_path, id: "title_button") %>
       <nav>
         <ul class = "nav navbar-nav navbar-right">
           <li><%=link_to "Home", root_path %></li>
           <li><%=link_to "About", about_path %></li>
           <li><%=link_to "Help", help_path %></li>
-          <% if logged_in?%>
-
-          <% else %>
           <li><%=link_to "Login", login_path %></li>
-          <%end %>
         </ul>
       </nav>
+      <%end %>
     </div>
   </header>
   <div class="container">

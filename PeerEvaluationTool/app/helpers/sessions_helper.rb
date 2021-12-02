@@ -7,14 +7,18 @@ module SessionsHelper
 
   # Returns current user
   def current_user
-    if @current_user.nil?
-      @current_user ||= User.find_by(id: session[:user_id])
-    end
+    @current_user ||= User.find_by(id: session[:user_id]) if @current_user.nil?
   end
 
   # Checks if user is logged in
   def logged_in?
     !current_user.nil?
+  end
+  
+  # Logs out user
+  def logout
+    session.delete(:user_id)
+    @current_user = nil
   end
 
 end
