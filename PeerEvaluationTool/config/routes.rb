@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'sessions/new'
   # Home page root route
-  root 'static_pages#home'
+  root 'static_pages#about'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
   get 'signup' => 'users#new'
+  get 'home' => 'static_pages#home'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+
 
   resources :users
 end

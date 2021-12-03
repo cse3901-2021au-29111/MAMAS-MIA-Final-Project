@@ -5,8 +5,8 @@ class User < ApplicationRecord
 
   EMAIL_FORMAT = URI::MailTo::EMAIL_REGEXP
   validates :email, length: { maximum: 255 },
-                    format: { with: EMAIL_FORMAT },
-                    uniqueness: { case_sensitive: false }
+            format: { with: EMAIL_FORMAT },presence: true,
+            uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true
+  validates :password_digest, presence: true
 end

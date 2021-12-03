@@ -10,13 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_172115) do
+ActiveRecord::Schema.define(version: 2021_12_03_074843) do
 
-  create_table "Users", force: :cascade do |t|
-    t.string "email"
+  create_table "groups", force: :cascade do |t|
+    t.string "group_name"
+    t.integer "group_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "group_no"
+    t.integer "rater_ID"
+    t.integer "ratee_ID"
+    t.integer "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.boolean "instructor"
+    t.string "email"
+    t.boolean "admin"
+    t.integer "group_no"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

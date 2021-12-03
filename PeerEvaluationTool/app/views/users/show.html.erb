@@ -1,6 +1,8 @@
 <div class="center jumbotron">
   <h1> Welcome <%= @user.first_name %> <%= @user.last_name %> !</h1>
-  <% if(@user.instructor) %>
-      <h2>TODO: Instructor view</h2>
-  <%end %>
+  <% if(@user.admin) %>
+      <h2>Click below to access your admin dashboard:</h2>
+    <h2><%=link_to "Admin Dashboard", rails_admin_path %></h2>
+
+<%end %>
 </div>
