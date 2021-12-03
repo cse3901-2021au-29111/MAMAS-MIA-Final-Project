@@ -1,3 +1,4 @@
+<%=#Login page for users%>
 <% provide(:title, "Login") %>
 <div class="center jumbotron">
   <div id= "login_title">
@@ -5,6 +6,7 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
+      <%=#Check with the database to see if the input is accurate%>
       <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
         <%= f.label :email %>
@@ -14,7 +16,7 @@
         <%= f.text_field :password %>
         <%= f.submit "Login", class: "btn btn-lg btn-primary" %>
       <% end %>
-
+      <%=#If the user does not have an account yet%>
       <p>Need to create an account? <%= link_to "Sign up here", signup_path %></p>
     </div>
   </div>
