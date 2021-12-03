@@ -1,5 +1,7 @@
+<%=# This is the page for users%>
 <div class="center jumbotron">
   <h1> Welcome <%= @user.first_name %> <%= @user.last_name %> !</h1>
+  <%=# If the user is an admin some other features will appear in addition%>
   <% if(@user.admin) %>
       <h2>Click below to access your admin dashboard:</h2>
     <h2><%=link_to "Admin Dashboard", rails_admin_path %></h2>
