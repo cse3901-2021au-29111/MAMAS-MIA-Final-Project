@@ -11,6 +11,8 @@
 
 
 <ul class="jumbotron">
+  <% if(@user.group_no != nil) %>
   <li class="list-group-item">Your group is <%= @user.group_no %></li>
-  <li class="list-group-item"> Your group name is <%=  %></li>
+  <li class="list-group-item"> Your group name is <%= @group.group_name %></li>
+  <% end %>
 </ul>

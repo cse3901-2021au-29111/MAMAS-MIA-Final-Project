@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    t = @user.group_no
+    @group = Group.find_by(group_number:t)
   end
 
   def new
