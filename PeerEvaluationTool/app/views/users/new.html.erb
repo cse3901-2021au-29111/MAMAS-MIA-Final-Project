@@ -1,3 +1,5 @@
+
+<%=# This is the page for new users before being entered into the database%>
 <% provide(:title, "Signup") %>
 <div id= "signup_message">
   <h1>Fill in the information below to sign up:</h1>
@@ -6,16 +8,20 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages'%>
-
+      
+      <%=#First Name%>
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
 
+      <%=#Last Name%>
       <%= f.label :last_name %>
       <%= f.text_field :last_name %>
 
+      <%=#Email%>
       <%= f.label :email %>
       <%= f.text_field :email %>
 
+      <%=#Password%>
       <%= f.label :password %>
       <%= f.text_field :password %>
       <%= f.submit "Finish", class: "btn btb-primary" %>
