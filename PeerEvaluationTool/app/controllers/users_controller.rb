@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     t = @user.group_no
     @group = Group.find_by(group_number:t)
     @teammates = User.where(group_no:t)
+
   end
 
   def new
