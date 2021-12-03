@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     t = @user.group_no
     @group = Group.find_by(group_number:t)
+    @teammates = User.where(group_no:t)
   end
 
   def new
@@ -20,6 +21,8 @@ class UsersController < ApplicationController
     end
   end
 
+  def add_rating
+  end
 
   private
 

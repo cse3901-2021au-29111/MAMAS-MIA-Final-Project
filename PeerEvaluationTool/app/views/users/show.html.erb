@@ -14,5 +14,22 @@
   <% if(@user.group_no != nil) %>
   <li class="list-group-item">Your group is <%= @user.group_no %></li>
   <li class="list-group-item"> Your group name is <%= @group.group_name %></li>
+<!--    <li> test <%#= @teammates.<%=%>.first_name %></li>-->
   <% end %>
 </ul>
+
+<div class="form">
+  <% if(@user.group_no != nil) %>
+
+    <% @teammates.each do |x| %>
+      <%# form_with(model: @) %>
+      <label for="<%= x.first_name %>"><%= x.first_name %></label>
+      <input type="<%= x.first_name %>" class="form-control" placeholder="Enter test" id="test">
+      <%#= button_tag(type: 'submit', class: "btn-primary") do %>
+<!--      <i class="icon-ok icon-white"></i> Save-->
+      <%# end %>
+      <br>
+<!--  <li> <%#= x.first_name %> </li>-->
+    <% end %>
+  <% end %>
+</div>
