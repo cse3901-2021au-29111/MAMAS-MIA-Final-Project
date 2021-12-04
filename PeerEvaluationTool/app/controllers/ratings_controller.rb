@@ -21,7 +21,7 @@ class RatingsController < ApplicationController
   private
 
   def rating_params
-    params.permit(:score)
+    params.permit(:score, :group_no, :rater_ID, :ratee_ID, :comment)
   end
 
 end

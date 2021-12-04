@@ -29,10 +29,19 @@
 
             <%#Score%>
             <%= r.label :score %>
-            <%= r.range_field :score, in:1..10 %>
+            <%= r.range_field :score, in:1..10, :step=>'.1' %>
+              <p>1 ---- 2   ----  3   ----  4    ----   5   ----    6   ----    7   ----    8    ----   9  ----   10</p>
+
+            <%#Comment%>
+            <%= r.label :comment %>
+            <%= r.text_field :comment %>
+
+            <%= r.hidden_field :group_no, value: @user.group_no %>
+            <%= r.hidden_field :rater_ID, value: @user.id %>
+            <%= r.hidden_field :ratee_ID, value: x.id %>
 
             <%= r.submit "Submit", class: "btn btb-primary 2"%>
-          <% end %>
+        <% end %>
 
         </div>
       </div>
