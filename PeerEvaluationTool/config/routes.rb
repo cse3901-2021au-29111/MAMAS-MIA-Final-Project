@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'sessions/new'
-  # Home page root route
   root 'static_pages#about'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
@@ -11,6 +10,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   post 'users/:id' => 'static_pages#home'
   post 'ratings' => 'ratings#create'
+  post '' => 'static_pages#home'
   delete 'logout' => 'sessions#destroy'
 
 

@@ -1,6 +1,6 @@
 
 <div class="center jumbotron">
-  <h1> Welcome <%= @user.first_name %> <%= @user.last_name %> !</h1>
+  <h1> Welcome <%= @user.first_name %> <%= @user.last_name %>!</h1>
 
   <% if(@user.admin) %>
       <h2>Click below to access your admin dashboard:</h2>
@@ -14,9 +14,16 @@
   <% if(@user.group_no != nil) %>
   <h2>Your group is <%= Group.find(@user.group_no).group_name%> (Group #<%= @user.group_no%>)</h2>
     <h3> Rate your group members below: </h3>
-<!--    <li> this is user <%#= @user.id %></li>-->
-  <% end %>
+    <div class="spacer">--------------------------------------------------------------------------------------</div>
 
+   <%else%>
+    <% if(@user.admin?) %>
+        <h3>From the admin panel you can view ratings, assign users to groups, create new users, and more.</h3>
+      <%else%>
+        <h2>Contact your instructor to get added to a group.</h2>
+      <% end %>
+
+<% end %>
 
 <% if @user.group_no != nil %>
   <% @teammates.each do |x| %>
@@ -44,11 +51,12 @@
             <%= r.hidden_field :rater_ID, value: @user.id %>
             <%= r.hidden_field :ratee_ID, value: x.id %>
 
-            <%= r.submit "Submit", class: "btn btb-primary 2"%>
+            <%= r.submit "Submit", class: "btn btn-primary"%>
         <% end %>
 
         </div>
       </div>
-  <% end %>
+      <div class="spacer">--------------------------------------------------------------------------------------</div>
+<% end %>
 <% end %>
 </ul>
