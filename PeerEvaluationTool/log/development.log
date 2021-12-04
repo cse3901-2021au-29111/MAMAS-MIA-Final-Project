@@ -35318,3 +35318,742 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.3ms | Allocations: 16834)
 
 
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 15:54:00 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 23.0ms | Allocations: 14063)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 25.8ms | Allocations: 30774)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 0.6ms | Allocations: 330)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 1.0ms | Allocations: 563)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 1.2ms | Allocations: 1113)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 1.8ms | Allocations: 1594)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 54.4ms | Allocations: 48689)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.2ms | Allocations: 49732)
+
+
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 15:58:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211204205711_create_ratings.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRatings (20211204205711)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_no" integer, "rater_ID" integer, "ratee_ID" integer, "comment" varchar, "score" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRatings (20211204205921)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_no" integer, "rater_ID" integer, "ratee_ID" integer, "comment" varchar, "score" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRatings (20211204205921)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_no" integer, "rater_ID" integer, "ratee_ID" integer, "comment" varchar, "score" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211204205921"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 16:00:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 24.2ms | Allocations: 8646)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 24.2ms | Allocations: 30877)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 0.5ms | Allocations: 433)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 0.9ms | Allocations: 672)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 2.1ms | Allocations: 1913)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 1.9ms | Allocations: 1657)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 54.2ms | Allocations: 44350)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.6ms | Allocations: 47075)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:01 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 32.0ms | Allocations: 17109)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 34.7ms | Allocations: 18799)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.6ms | Allocations: 20728)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:02 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 11.2ms | Allocations: 4981)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 14.2ms | Allocations: 6671)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 7723)
+
+
+Started GET "/admin/group?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:03 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"group"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY groups.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 45.3ms | Allocations: 7414)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 47.8ms | Allocations: 9103)
+Completed 200 OK in 59ms (Views: 48.5ms | ActiveRecord: 1.7ms | Allocations: 13102)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:04 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 7.8ms | Allocations: 4980)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 9.8ms | Allocations: 6670)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 7722)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:01:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 12345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 21611)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 1.0ms | Allocations: 23569)
+
+
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:01:17 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>"5", "comment"=>"Did a good job", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mRating Create (3.8ms)[0m  [1m[32mINSERT INTO "ratings" ("group_no", "rater_ID", "ratee_ID", "comment", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["group_no", 1], ["rater_ID", 3], ["ratee_ID", 3], ["comment", "Did a good job"], ["score", 5], ["created_at", "2021-12-04 21:01:17.060358"], ["updated_at", "2021-12-04 21:01:17.060358"]]
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+No template found for RatingsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 5.5ms | Allocations: 4807)
+
+
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 16:01:18 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 14.4ms | Allocations: 7413)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 36.1ms | Allocations: 30773)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 0.5ms | Allocations: 323)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 0.9ms | Allocations: 554)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 1.3ms | Allocations: 1109)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 1.8ms | Allocations: 1594)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 55.5ms | Allocations: 42025)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.3ms | Allocations: 43073)
+
+
+Started GET "/admin/rating?model_name=rating&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:23 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (1.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 14.3ms | Allocations: 6319)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 16.8ms | Allocations: 8008)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 1.2ms | Allocations: 9061)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:27 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.2ms | Allocations: 7401)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 16.1ms | Allocations: 9090)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 10140)
+
+
+Started GET "/admin/rating?model_name=rating&sort=created_at&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:30 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "sort"=>"created_at", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.created_at desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 20.9ms | Allocations: 7412)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 22.9ms | Allocations: 9101)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms | Allocations: 10150)
+
+
+Started GET "/admin/rating?model_name=rating&set=1&sort=created_at&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:01:32 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "set"=>"1", "sort"=>"created_at", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.created_at desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 11.3ms | Allocations: 6319)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 13.6ms | Allocations: 8008)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 9057)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRatings (20211204210224)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_no" integer, "rater_ID" integer, "ratee_ID" integer, "rater_comments" varchar, "score" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211204210224"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/group?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:02:58 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"group"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY groups.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 54.9ms | Allocations: 46700)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 59.6ms | Allocations: 53113)
+Completed 200 OK in 247ms (Views: 64.3ms | ActiveRecord: 1.5ms | Allocations: 124997)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:02:59 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 9.6ms | Allocations: 5898)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 12.1ms | Allocations: 7598)
+Completed 200 OK in 22ms (Views: 12.8ms | ActiveRecord: 0.6ms | Allocations: 13599)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:03:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 13426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 118.1ms | Allocations: 81564)
+Completed 200 OK in 132ms (Views: 119.1ms | ActiveRecord: 1.1ms | Allocations: 89469)
+
+
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:03:08 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>"5.5", "comment"=>"Did a good job", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 862)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for Rating.):
+  
+app/controllers/ratings_controller.rb:12:in `create'
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:03:25 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>"5.5", "comment"=>"Did a good job", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :comment, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/ratings_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mRating Create (0.2ms)[0m  [1m[32mINSERT INTO "ratings" ("group_no", "rater_ID", "ratee_ID", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["group_no", 1], ["rater_ID", 3], ["ratee_ID", 3], ["score", 5], ["created_at", "2021-12-04 21:03:25.850996"], ["updated_at", "2021-12-04 21:03:25.850996"]]
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+No template found for RatingsController#create, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 3.8ms | Allocations: 12056)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:03:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 14.7ms | Allocations: 14659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 24085)
+Completed 200 OK in 52ms (Views: 33.7ms | ActiveRecord: 1.3ms | Allocations: 32002)
+
+
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:03:32 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>"3.6", "comment"=>"Did a good job", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :comment, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mRating Create (0.3ms)[0m  [1m[32mINSERT INTO "ratings" ("group_no", "rater_ID", "ratee_ID", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["group_no", 1], ["rater_ID", 3], ["ratee_ID", 3], ["score", 3], ["created_at", "2021-12-04 21:03:32.649448"], ["updated_at", "2021-12-04 21:03:32.649448"]]
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+No template found for RatingsController#create, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 3.1ms | Allocations: 4670)
+
+
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 16:03:36 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 18.1ms | Allocations: 9813)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 50.6ms | Allocations: 38850)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 2.9ms | Allocations: 3913)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 7.2ms | Allocations: 9584)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 2.8ms | Allocations: 3382)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 1.7ms | Allocations: 1602)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 87.4ms | Allocations: 70432)
+Completed 200 OK in 97ms (Views: 94.2ms | ActiveRecord: 0.2ms | Allocations: 72052)
+
+
+Started GET "/admin/rating?model_name=rating&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:03:41 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.6ms | Allocations: 8210)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 15.6ms | Allocations: 9899)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 10956)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:04:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 12268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 21920)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.4ms | Allocations: 24417)
+
+
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:04:31 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>"7.8", "rater_comments"=>"Did a good job", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mRating Create (0.9ms)[0m  [1m[32mINSERT INTO "ratings" ("group_no", "rater_ID", "ratee_ID", "rater_comments", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["group_no", 1], ["rater_ID", 3], ["ratee_ID", 3], ["rater_comments", "Did a good job"], ["score", 7], ["created_at", "2021-12-04 21:04:31.948659"], ["updated_at", "2021-12-04 21:04:31.948659"]]
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+No template found for RatingsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 3.2ms | Allocations: 6734)
+
+
+Started GET "/admin/rating" for 127.0.0.1 at 2021-12-04 16:04:33 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 56.5ms | Allocations: 48642)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 26.4ms | Allocations: 35041)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 2.5ms | Allocations: 3850)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 6.0ms | Allocations: 9487)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 2.5ms | Allocations: 3247)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.3ms | Allocations: 6173)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 101.1ms | Allocations: 109927)
+Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.2ms | Allocations: 111593)
+
+
+Started GET "/admin/rating?model_name=rating&sort=group_no&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:04:40 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "sort"=>"group_no", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.group_no asc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 33.3ms | Allocations: 11693)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 35.5ms | Allocations: 13382)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.2ms | Allocations: 14427)
+
+
+Started GET "/admin/rating?model_name=rating&sort=group_no&sort_reverse=true&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:04:41 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "sort"=>"group_no", "sort_reverse"=>"true", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.group_no desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 15.8ms | Allocations: 11677)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 20.7ms | Allocations: 13366)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 14409)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRatings (20211204210635)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_no" integer, "rater_ID" integer, "ratee_ID" integer, "project_no" integer, "score" integer, "rater_comments" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211204210635"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:08:38 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 20913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 192.8ms | Allocations: 89077)
+Completed 200 OK in 232ms (Views: 194.2ms | ActiveRecord: 1.3ms | Allocations: 100753)
+
+
+Started GET "/admin/rating?model_name=rating&sort=group_no&sort_reverse=true" for 127.0.0.1 at 2021-12-04 16:10:16 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "sort"=>"group_no", "sort_reverse"=>"true"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.group_no desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 63.8ms | Allocations: 45006)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 38.8ms | Allocations: 38849)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 4.8ms | Allocations: 4244)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 10.2ms | Allocations: 9901)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 3.6ms | Allocations: 3550)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 5.3ms | Allocations: 6392)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 129.0ms | Allocations: 111070)
+Completed 200 OK in 278ms (Views: 130.3ms | ActiveRecord: 1.7ms | Allocations: 179326)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:10:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 6361)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6442)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms | Allocations: 8899)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `range' for #<ActionView::Base:0x007fde75cdc480>
+Did you mean?  rand):
+    29: 
+    30:             <%#Project%>
+    31:             <%= r.label :project_no, "Project #" %>
+    32:             <%= r.number_field :project_no, range >=0 %>
+    33: 
+    34:             <%#Score%>
+    35:             <%= r.label :score %>
+  
+app/views/users/show.html.erb:32
+app/views/users/show.html.erb:28
+app/views/users/show.html.erb:22
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:10:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 14.5ms | Allocations: 15095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 24884)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 0.5ms | Allocations: 27588)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-04 16:10:29 -0500
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 1.8ms | Allocations: 797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9941)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 11071)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-12-04 16:10:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" = ? LIMIT ?[0m  [["group_number", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_no" = ?[0m  [["group_no", 1]]
+  ↳ app/views/users/show.html.erb:22
+  Rendered users/show.html.erb within layouts/application (Duration: 28.2ms | Allocations: 14352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 23511)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.5ms | Allocations: 25080)
+
+
+Started POST "/ratings" for 127.0.0.1 at 2021-12-04 16:11:09 -0500
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project_no"=>"5", "score"=>"7.1", "rater_comments"=>"test project 5  submission, score 7", "group_no"=>"1", "rater_ID"=>"3", "ratee_ID"=>"3", "commit"=>"Submit"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mRating Create (2.5ms)[0m  [1m[32mINSERT INTO "ratings" ("group_no", "rater_ID", "ratee_ID", "project_no", "score", "rater_comments", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["group_no", 1], ["rater_ID", 3], ["ratee_ID", 3], ["project_no", 5], ["score", 7], ["rater_comments", "test project 5  submission, score 7"], ["created_at", "2021-12-04 21:11:09.855739"], ["updated_at", "2021-12-04 21:11:09.855739"]]
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:13:in `create'
+No template found for RatingsController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 8.0ms | Allocations: 7011)
+
+
+Started GET "/admin/rating?model_name=rating&sort=group_no&sort_reverse=true" for 127.0.0.1 at 2021-12-04 16:11:11 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "sort"=>"group_no", "sort_reverse"=>"true"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.group_no desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 40.2ms | Allocations: 44607)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 28.0ms | Allocations: 35042)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 13.8ms | Allocations: 3855)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 17.8ms | Allocations: 9494)
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 2.9ms | Allocations: 3256)
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.6ms | Allocations: 6187)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 98.9ms | Allocations: 105924)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.2ms | Allocations: 107651)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:14 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 29.1ms | Allocations: 14233)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 31.7ms | Allocations: 15923)
+Completed 200 OK in 42ms (Views: 32.1ms | ActiveRecord: 0.3ms | Allocations: 17448)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:15 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 11.0ms | Allocations: 7487)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 12.9ms | Allocations: 9176)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 10238)
+
+
+Started GET "/admin/rating?model_name=rating&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:16 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.9ms | Allocations: 6826)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 15.8ms | Allocations: 8515)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 9571)
+
+
+Started GET "/admin/rating?model_name=rating&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:46 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"rating", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 12.0ms | Allocations: 6809)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 14.5ms | Allocations: 8498)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 9554)
+
+
+Started GET "/admin/group?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:51 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"group"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" ORDER BY groups.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 15.6ms | Allocations: 7339)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 17.8ms | Allocations: 9028)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 10374)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:52 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 10.8ms | Allocations: 7481)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 12.9ms | Allocations: 9170)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 10226)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:11:52 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 26.0ms | Allocations: 13066)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 28.7ms | Allocations: 14755)
+Completed 200 OK in 40ms (Views: 29.1ms | ActiveRecord: 0.2ms | Allocations: 15817)
+
+
+Started GET "/admin/rating?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2021-12-04 16:12:02 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"rating"}
+  Rendering layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY ratings.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 15.8ms | Allocations: 7489)
+  Rendered layout /home/max/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 17.9ms | Allocations: 9178)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 10241)
+
+

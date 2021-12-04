@@ -4,10 +4,14 @@ one:
   group_no: 1
   rater_ID: 1
   ratee_ID: 1
+  project_no: 1
   score: 1
+  rater_comments: MyString
 
 two:
   group_no: 1
   rater_ID: 1
   ratee_ID: 1
+  project_no: 1
   score: 1
+  rater_comments: MyString
