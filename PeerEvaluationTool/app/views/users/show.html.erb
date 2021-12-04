@@ -29,9 +29,9 @@
 
             <%#Score%>
             <%= r.label :score %>
-            <%= r.number_field :score %>
+            <%= r.range_field :score, in:1..10 %>
 
-            <%= r.submit "Submit2", class: "btn btb-primary 2"%>
+            <%= r.submit "Submit", class: "btn btb-primary 2"%>
           <% end %>
 
         </div>
