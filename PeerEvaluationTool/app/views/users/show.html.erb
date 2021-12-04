@@ -10,29 +10,32 @@
 </div>
 
 
-<ul class="jumbotron">
+<ul class="jumbotron" id="rating_field">
   <% if(@user.group_no != nil) %>
-  <li class="list-group-item">Your group is <%= @user.group_no %></li>
-  <li class="list-group-item"> Your group name is <%= @group.group_name %></li>
+  <h2>Your group is <%= Group.find(@user.group_no).group_name%> (Group #<%= @user.group_no%>)</h2>
+    <h3> Rate your group members below: </h3>
 <!--    <li> this is user <%#= @user.id %></li>-->
   <% end %>
-</ul>
 
-<div class="form">
-  <div class="row">
-    <% if @user.group_no != nil %>
-      <% @teammates.each do |x| %>
-        <div class="col-md-2">
-          <label for="<%= x.first_name %>"><%= x.first_name %></label>
-          <%# does not save atm and model rating not working atm %>
-          <%= form_with(model: @rating, local: true) do |f| %>
-            <%= f.label :score %>
-            <%= f.number_field :score %>
-            <%= f.submit "Finish", class: "btn btb-primary" %>
-            <br>
+
+<% if @user.group_no != nil %>
+  <% @teammates.each do |x| %>
+      <h2><%= x.first_name %> <%= x.last_name %></h2>
+      <%# does not save atm and model rating not working atm %>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= form_with(model: @rating, url: {controller:'ratings', action:'create'}) do |r| %>
+
+            <%#Score%>
+            <%= r.label :score %>
+            <%= r.number_field :score %>
+
+            <%= r.submit "Submit2", class: "btn btb-primary 2"%>
           <% end %>
+
         </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+      </div>
+  <% end %>
+<% end %>
+</ul>

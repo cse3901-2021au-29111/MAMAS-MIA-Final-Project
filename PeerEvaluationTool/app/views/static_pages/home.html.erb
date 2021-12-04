@@ -4,5 +4,7 @@
   <h1>DOGME</h1>
   <h2>The Peer Evaluation Tool for everyone.</h2>
   <%#In case if the user is not logged in%>
-  <%=link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
+  <% if logged_in? == false%>
+      <%=link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>

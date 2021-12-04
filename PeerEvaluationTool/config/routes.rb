@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   post 'users/:id' => 'static_pages#home'
+  post 'ratings' => 'ratings#create'
   delete 'logout' => 'sessions#destroy'
 
 

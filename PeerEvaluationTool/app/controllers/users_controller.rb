@@ -22,9 +22,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_rating
-  end
-
   private
 
   def user_params
