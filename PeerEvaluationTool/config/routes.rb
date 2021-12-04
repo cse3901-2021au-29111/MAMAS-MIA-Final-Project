@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   get 'home' => 'static_pages#home'
   get 'login' => 'sessions#new'
+  get 'rating' => ''
   post 'login' => 'sessions#create'
+  post 'users/:id' => 'static_pages#home'
   delete 'logout' => 'sessions#destroy'
 
 

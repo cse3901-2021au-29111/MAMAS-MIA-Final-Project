@@ -14,23 +14,24 @@
   <% if(@user.group_no != nil) %>
   <li class="list-group-item">Your group is <%= @user.group_no %></li>
   <li class="list-group-item"> Your group name is <%= @group.group_name %></li>
+<!--    <li> this is user <%#= @user.id %></li>-->
   <% end %>
 </ul>
 
 <div class="form">
   <div class="row">
-    <% if(@user.group_no != nil) %>
+    <% if @user.group_no != nil %>
       <% @teammates.each do |x| %>
         <div class="col-md-2">
           <label for="<%= x.first_name %>"><%= x.first_name %></label>
-          <%# rating does not work %>
+          <%# does not save atm and model rating not working atm %>
           <%= form_with(model: @rating, local: true) do |f| %>
             <%= f.label :score %>
-            <%= f.text_field :score %>
+            <%= f.number_field :score %>
             <%= f.submit "Finish", class: "btn btb-primary" %>
             <br>
-            </div>
           <% end %>
+        </div>
       <% end %>
     <% end %>
   </div>
