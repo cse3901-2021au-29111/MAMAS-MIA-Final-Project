@@ -16,4 +16,4 @@ Site map:
 ![sitemap](https://user-images.githubusercontent.com/47831063/144731521-1f71a690-a585-449c-a735-aa0fb2fd22e6.png)
 
 Database Model Design:
-![image](https://user-images.githubusercontent.com/47831063/144731577-da426771-f3a4-4cc6-a601-7cd5a39f91c5.png)
+![image](https://user-images.githubusercontent.com/47831063/144731596-ab2ced80-155e-4401-a56c-1e624720a619.png)
