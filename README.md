@@ -5,6 +5,7 @@
 Creators of the project:\
 -Max Starvaggi
 -Srujan Kalva
+-Moid Shafi
 ----------------------------------------------------------------------------------------------------
 
 
