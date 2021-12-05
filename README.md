@@ -21,7 +21,7 @@ Note: Users can create an account within signup, but an admin must log in and na
 
 Site Map:
 
-![sitemap](https://user-images.githubusercontent.com/47831063/144762026-4d2bd83d-c964-45d6-b1f6-e1b57a34c2df.png)
+![sitemap](https://user-images.githubusercontent.com/47831063/144762064-76247c0c-9c97-4db7-b524-f691f4935ed5.png)
 
 ----------------------------------------------------------------------------------------------------
 
