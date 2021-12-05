@@ -10,9 +10,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%# creating a navbar for page %>
   <body>
   <header class = "navbar navbar-fixed-top navbar-inverse">
     <div class="container">
+      <%# creating navbar for logged in user %>
       <% if logged_in?%>
         <%=link_to("DOGME Peer Evaluation Tool", @current_user, id: "title_button") %>
         <nav>
@@ -24,18 +26,20 @@
           </ul>
         </nav>
       <% else %>
-      <%=link_to("DOGME Peer Evaluation Tool", root_path, id: "title_button") %>
-      <nav>
-        <ul class = "nav navbar-nav navbar-right">
-          <li><%=link_to "About", about_path %></li>
-          <li><%=link_to "Help", help_path %></li>
-          <li><%=link_to "Signup", home_path %></li>
-          <li><%=link_to "Login", login_path %></li>
-        </ul>
-      </nav>
+        <%# creating navbar for not logged in user %>
+        <%=link_to("DOGME Peer Evaluation Tool", root_path, id: "title_button") %>
+        <nav>
+          <ul class = "nav navbar-nav navbar-right">
+            <li><%=link_to "About", about_path %></li>
+            <li><%=link_to "Help", help_path %></li>
+            <li><%=link_to "Signup", home_path %></li>
+            <li><%=link_to "Login", login_path %></li>
+          </ul>
+        </nav>
       <%end %>
     </div>
   </header>
+
   <div class="container">
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type%>">
