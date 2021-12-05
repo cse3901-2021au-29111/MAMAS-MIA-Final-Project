@@ -1,5 +1,33 @@
 <%#Information for the about page for the user%>
 <% provide(:title, "DOGME") %>
+
+<header class = "navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <% if logged_in?%>
+      <%=link_to("DOGME Peer Evaluation Tool", @current_user, id: "title_button") %>
+      <nav>
+        <ul class = "nav navbar-nav navbar-right">
+          <li><%=link_to "About", about_path %></li>
+          <li><%=link_to "Help", help_path %></li>
+          <li><%=link_to "Profile", @current_user %></li>
+          <li><%=link_to "Logout", logout_path, method: "delete" %></li>
+        </ul>
+      </nav>
+    <% else %>
+      <%=link_to("DOGME Peer Evaluation Tool", root_path, id: "title_button") %>
+      <nav>
+        <ul class = "nav navbar-nav navbar-right">
+          <li><%=link_to "About", about_path %></li>
+          <li><%=link_to "Help", help_path %></li>
+          <li><%=link_to "Signup", home_path %></li>
+          <li><%=link_to "Login", login_path %></li>
+        </ul>
+      </nav>
+    <%end %>
+  </div>
+</header>
+
+
 <div class="center jumbotron">
   <div id="about_page">
     <h1>DOGME</h1>
@@ -7,7 +35,7 @@
     <p>This peer evaluation tool was developed by MAMAS MIA for the CSE 3901 Final Project in 2021.</p>
     <p>Inspiration for the site came from <a href="https://catme.org/login/index">Purdue's CATME</a> system.</p>
     <% if logged_in? == false%>
-      <p><strong>*Click sign-up on the top right of your screen to create an account now!*</strong></p>
+      <p><strong>*Click signup on the top right of your screen to create an account now!*</strong></p>
     <%end %>
       </div>
 </div>
