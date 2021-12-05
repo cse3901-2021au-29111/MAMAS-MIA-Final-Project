@@ -39431,3 +39431,67 @@ Processing by StaticPagesController#help as HTML
 Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 11207)
 
 
+Started GET "/users/2" for 127.0.0.1 at 2021-12-04 19:11:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."group_number" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 10402)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 0.6ms | Allocations: 13691)
+
+
+Started GET "/help" for 127.0.0.1 at 2021-12-04 19:11:04 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 9393)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.1ms | Allocations: 10517)
+
+
+Started GET "/about" for 127.0.0.1 at 2021-12-04 19:11:04 -0500
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 9837)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms | Allocations: 10392)
+
+
+Started GET "/about" for 127.0.0.1 at 2021-12-04 19:11:30 -0500
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 3.3ms | Allocations: 4812)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4892)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 6207)
+
+
+  
+ActionView::Template::Error (The asset "dogme2.png" is not present in the asset pipeline.
+):
+    3: <div class="center jumbotron">
+    4:   <div id="about_page">
+    5:     <h1>DOGME</h1>
+    6:     <%= image_tag "dogme2.png", height: 300 %>
+    7:     <p>This peer evaluation tool was developed by MAMAS MIA for the CSE 3901 Final Project in 2021.</p>
+    8:     <p>Inspiration for the site came from <a href="https://catme.org/login/index">Purdue's CATME</a> system.</p>
+    9:   </div>
+  
+app/views/static_pages/about.html.erb:6

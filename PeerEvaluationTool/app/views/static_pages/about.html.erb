@@ -3,8 +3,11 @@
 <div class="center jumbotron">
   <div id="about_page">
     <h1>DOGME</h1>
-    <%= image_tag "dogme.png", height: 300 %>
+    <%= image_tag "dogme3.png", height: 500 %>
     <p>This peer evaluation tool was developed by MAMAS MIA for the CSE 3901 Final Project in 2021.</p>
     <p>Inspiration for the site came from <a href="https://catme.org/login/index">Purdue's CATME</a> system.</p>
-  </div>
+    <% if logged_in? == false%>
+      <p><strong>*Click sign-up on the top right of your screen to create an account now!*</strong></p>
+    <%end %>
+      </div>
 </div>
