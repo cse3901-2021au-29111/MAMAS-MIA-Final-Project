@@ -28,4 +28,4 @@ Site Map:
 
 Database Model Design:
 
-![image](https://user-images.githubusercontent.com/47831063/144731596-ab2ced80-155e-4401-a56c-1e624720a619.png)
+![image](https://user-images.githubusercontent.com/47831063/145484103-a3a81389-b272-4914-baa2-f9a1680969d0.png)
