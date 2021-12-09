@@ -49,10 +49,10 @@
             <%= r.label :rater_comments %>
             <%= r.text_field :rater_comments %>
 
-            <%# send user's id, group number, and teammates id and keep them hidden from user %>
+            <%# send user's name, group number, and teammates name and keep them hidden from user %>
             <%= r.hidden_field :group_no, value: @user.group_no %>
-            <%= r.hidden_field :rater_ID, value: @user.id %>
-            <%= r.hidden_field :ratee_ID, value: x.id %>
+            <%= r.hidden_field :rater, value: (@user.first_name + " " + @user.last_name) %>
+            <%= r.hidden_field :ratee, value: (x.first_name + " " + x.last_name) %>
 
             <%# submit button %>
             <%= r.submit "Submit", class: "btn btn-primary"%>

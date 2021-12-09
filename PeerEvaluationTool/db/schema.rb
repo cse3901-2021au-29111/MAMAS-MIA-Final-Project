@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_04_210635) do
+ActiveRecord::Schema.define(version: 2021_12_09_215515) do
 
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2021_12_04_210635) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "group_no"
-    t.integer "rater_ID"
-    t.integer "ratee_ID"
+    t.string "rater"
+    t.string "ratee"
     t.integer "project_no"
     t.integer "score"
     t.string "rater_comments"
