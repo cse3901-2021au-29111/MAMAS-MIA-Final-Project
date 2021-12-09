@@ -8,5 +8,6 @@ class User < ApplicationRecord
   validates :email, length: { maximum: 255 },
             format: { with: EMAIL_FORMAT },
             uniqueness: { case_sensitive: false }
-  has_secure_password
+  has_secure_password(options={validations:false})
+  validates :password, presence: true
 end

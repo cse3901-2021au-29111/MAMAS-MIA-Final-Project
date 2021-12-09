@@ -26,6 +26,22 @@ class UsersController < ApplicationController
     end
   end
 
+  # Update user information
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = "Settings changed"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  # Edit user information
+  def edit
+    @user = User.find(params[:id])
+  end
+
   # Private method for user parameters
   private
   def user_params

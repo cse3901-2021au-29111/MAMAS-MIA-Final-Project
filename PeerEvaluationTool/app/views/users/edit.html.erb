@@ -1,0 +1,33 @@
+
+<% # This is the page for new users before being entered into the database%>
+<% provide(:title, "Edit Profile") %>
+<div class="static_message">
+  <h1>Edit your profile:</h1>
+  <h4>Change any of the field below to update your information.</h4>
+  <h4>Some field may already be filled out. Entering a different password will change your current one.</h4>
+  <h4>Press 'Save' to save the changes.</h4>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages'%>
+
+      <%#First Name%>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+
+      <%#Last Name%>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%#Email%>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%#Password%>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
