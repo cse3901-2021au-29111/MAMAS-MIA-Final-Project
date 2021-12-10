@@ -9,5 +9,5 @@ class User < ApplicationRecord
             format: { with: EMAIL_FORMAT },
             uniqueness: { case_sensitive: false }
   has_secure_password(options={validations:false})
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 end
