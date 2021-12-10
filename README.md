@@ -1,17 +1,20 @@
 # MAMAS-MIA-Final-Project
 
 <strong>Peer Evaluation Tool</strong>
-
-Creators of the project:\
--Max Starvaggi
--Srujan Kalva
--Moid Shafi
 ----------------------------------------------------------------------------------------------------
 
+Creators of the project:\
+-Max Starvaggi\
+-Srujan Kalva\
+-Moid Shafi
+
+----------------------------------------------------------------------------------------------------
+<strong>Installing Dependencies:</strong>
 
 Make sure to run ```bundle install``` from within the /PeerEvaluationTool/ directory
 
 ----------------------------------------------------------------------------------------------------
+<strong>Running the application:</strong>
 
 Run server with ```rails server``` and then navigate to **http://127.0.0.1:3000** within Firefox
 
