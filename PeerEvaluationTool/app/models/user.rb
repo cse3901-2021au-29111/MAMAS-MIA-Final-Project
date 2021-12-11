@@ -10,4 +10,5 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }
   has_secure_password(options={validations:false})
   validates :password, presence: true, on: :create
+  validates :user_grade, presence: false, length: {maximum: 2}
 end
