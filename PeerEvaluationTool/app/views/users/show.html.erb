@@ -13,8 +13,15 @@
 <ul class="jumbotron" id="rating_field">
 <%# Checks if the user has a group assigned %>
   <% if(@user.group_no != nil) %>
-    <%# if user has a group, then displays the name and number %>
+
+    <%# if user has a grade, then display the grade %>
+    <% if(@user.user_grade != nil) %>
     <h2>Your current grade is: <%= @user.user_grade.upcase %></h2>
+    <% else %>
+    <h2>You have not been assigned a grade yet!</h2>
+    <% end %>
+
+    <%# if user has a group, then displays the name and number %>
     <h2>Your group is <%= Group.find(@user.group_no).group_name%> (Group #<%= @user.group_no%>)</h2>
     <h3> Rate your group members below: </h3>
     <div class="spacer">--------------------------------------------------------------------------------------</div>
