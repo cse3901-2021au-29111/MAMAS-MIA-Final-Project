@@ -33,44 +33,44 @@
     <% if @user.group_no != nil %>
       <%# displays the group members and gives them a form with ratings and comments to fill out for a project %>
       <% @teammates.each do |x| %>
-        <h2><%= x.first_name %> <%= x.last_name %></h2>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <%# access the rating controller to save the ratings by the user for each user %>
-            <%= form_with(model: @rating, url: {controller:'ratings', action:'create'}) do |r| %>
+        <%# in case an admin is assigned a group, it should not give them a rating %>
+        <% unless x.admin %>
+          <h2><%= x.first_name %> <%= x.last_name %></h2>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <%# access the rating controller to save the ratings by the user for each user %>
+              <%= form_with(model: @rating, url: {controller:'ratings', action:'create'}) do |r| %>
 
-              <%#Project%>
-              <%= r.label :project_no, "Project #" %>
-              <%= r.number_field :project_no%>
+                <%#Project%>
+                <%= r.label :project_no, "Project #" %>
+                <%= r.number_field :project_no%>
 
-              <%#Score%>
-              <%= r.label :score %>
-              <%= r.range_field :score, in:1..10, :step=>'.1' %>
-              <p>1 ---- 2   ----  3   ----  4    ----   5   ----    6   ----    7   ----    8    ----   9  ----   10</p>
+                <%#Score%>
+                <%= r.label :score %>
+                <%= r.range_field :score, in:1..10, :step=>'.1' %>
+                <p>1 ---- 2   ----  3   ----  4    ----   5   ----    6   ----    7   ----    8    ----   9  ----   10</p>
 
-              <%#Comment%>
-              <%= r.label :rater_comments %>
-              <%= r.text_field :rater_comments %>
+                <%#Comment%>
+                <%= r.label :rater_comments %>
+                <%= r.text_field :rater_comments %>
 
-              <%# send user's name, group number, and teammates name and keep them hidden from user %>
-              <%= r.hidden_field :group_no, value: @user.group_no %>
-              <%= r.hidden_field :rater, value: (@user.first_name + " " + @user.last_name) %>
-              <%= r.hidden_field :ratee, value: (x.first_name + " " + x.last_name) %>
+                <%# send user's name, group number, and teammates name and keep them hidden from user %>
+                <%= r.hidden_field :group_no, value: @user.group_no %>
+                <%= r.hidden_field :rater, value: (@user.first_name + " " + @user.last_name) %>
+                <%= r.hidden_field :ratee, value: (x.first_name + " " + x.last_name) %>
 
-              <%# submit button %>
-              <%= r.submit "Submit", class: "btn btn-primary", 'data-disable-with' => "Submitted"%>
-
-            <% end %>
-
+                <%# submit button %>
+                <%= r.submit "Submit", class: "btn btn-primary", 'data-disable-with' => "Submitted"%>
+              <% end %>
+            </div>
           </div>
-        </div>
-        <%# lines to show cutoff for each group member %>
-        <div class="spacer">--------------------------------------------------------------------------------------</div>
+          <%# lines to show cutoff for each group member %>
+          <div class="spacer">--------------------------------------------------------------------------------------</div>
+        <% end %>
       <% end %>
     <% end %>
   <% else %>
     <%# if user is admin display general admin info %>
     <h3>From the admin panel you can view ratings, assign users to groups, create new users, and more.</h3>
   <% end %>
-
 </ul>
