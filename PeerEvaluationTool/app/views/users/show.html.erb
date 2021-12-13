@@ -23,10 +23,11 @@
     <%# Checks if the user has a group assigned %>
     <% if @user.group_no != nil %>
       <%# if user has a group, then displays the name and number %>
-      <h2>Your group is <%= Group.find(@user.group_no).group_name%> (Group #<%= @user.group_no%>)</h2>
+      <h2>Your group is <%= Group.find_by(group_number: @user.group_no).group_name%> (Group #<%= @user.group_no%>)  </h2>
       <h3> Rate your group members below: </h3>
       <div class="spacer">--------------------------------------------------------------------------------------</div>
     <%else%>
+      <%# if user does not have group, then display general info %>
       <h2>Contact your instructor to get added to a group.</h2>
     <% end %>
 
