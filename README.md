@@ -25,4 +25,5 @@ Note: Users can create an account within signup, but an admin must log in and na
 
 <strong>Link to heroku deployment:</strong> https://dogme-peer-evaluation-tool.herokuapp.com/
 
+Admin login credentials: Email- brutus@osu.edu , See discord for password
 ----------------------------------------------------------------------------------------------------
