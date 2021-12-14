@@ -9,9 +9,10 @@ Creators of the project:\
 -Moid Shafi
 
 ----------------------------------------------------------------------------------------------------
-<strong>Installing Dependencies:</strong>
+<strong>Setting up the project:</strong>
 
-Run ```bundle install``` from within the /PeerEvaluationTool/ directory
+Run ```bundle install``` from within the /PeerEvaluationTool/ directory to install dependencies 
+Run ```rails db:migrate``` to ready the database
 
 ----------------------------------------------------------------------------------------------------
 <strong>Running the application:</strong>
