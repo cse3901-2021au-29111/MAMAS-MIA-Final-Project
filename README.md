@@ -22,5 +22,6 @@ Run the rails server with ```rails server``` and then navigate to **http://127.0
 
 Note: Users can create an account within signup, but an admin must log in and navigate to the admin taskbar to assing a user to a group.
 
+<strong>Link to heroku deployment:</strong> https://dogme-peer-evaluation-tool.herokuapp.com/
 
-Link to heroku deployment: https://dogme-peer-evaluation-tool.herokuapp.com/
+----------------------------------------------------------------------------------------------------
