@@ -11,7 +11,7 @@ Creators of the project:\
 ----------------------------------------------------------------------------------------------------
 <strong>Setting up the project:</strong>
 
-Run ```bundle install``` from within the /PeerEvaluationTool/ directory to install dependencies 
+Run ```bundle install``` from within the /PeerEvaluationTool/ directory to install dependencies\ 
 Run ```rails db:migrate``` to ready the database
 
 ----------------------------------------------------------------------------------------------------
